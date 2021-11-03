@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +25,7 @@ Route::get('/master', function () {
 Route::get('/dashboard', function () {
     return view('pages.dashboard');
 });
+
+Route::get('/product', [ProductController::class, 'index']);
+
+Route::get('/product/delete/{id}', [ProductController::class, 'destroy'])->name('produkDelete');
