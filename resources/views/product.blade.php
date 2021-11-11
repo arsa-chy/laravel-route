@@ -6,7 +6,7 @@
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Data Product</h3>
-                {{-- <a href="" class="btn btn-flat btn-primary">Create</a> --}}
+                <a href="" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Create</a>
               </div>
               <!-- /.card-header -->
               <div class="card-body table-responsive p-0">
