@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CustomerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,18 +17,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/master', function () {
-    return view('templates.master');
-});
-
-Route::get('/dashboard', function () {
-    return view('pages.dashboard');
-});
+Route::get('/', [DashboardController::class, 'index']);
 
 Route::get('/product', [ProductController::class, 'index']);
-
 Route::get('/product/delete/{id}', [ProductController::class, 'destroy'])->name('produkDelete');
+
+Route::get('/category', [CategoryController::class, 'index']);
+Route::get('/category/delete/{id}', [CategoryController::class, 'destroy'])->name('deleteCategory');
+
+Route::get('/customer', [CustomerController::class, 'index']);
+Route::get('/customer/delete/{id}', [CustomerController::class, 'destroy'])->name('deleteCustomer');

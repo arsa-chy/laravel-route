@@ -11,7 +11,7 @@ class ProductController extends Controller
     {
         $getProduct = M_Product::all();
 
-        return view('product', compact('getProduct'));
+        return view('pages.product', compact('getProduct'));
     }
 
     public function destroy($id)

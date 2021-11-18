@@ -36,15 +36,39 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="/dashboard" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <a href="/" class="nav-link" {{ request()->is('/') ? 'active' : ''}}>
+              <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
-                {{-- <i class="right fas fa-angle-left"></i> --}}
               </p>
             </a>
           </li>
           <li class="nav-item">
+            <a href="product" class="nav-link" {{ request()->is('/') ? 'active' : ''}}>
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Product
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="category" class="nav-link" {{ request()->is('/') ? 'active' : ''}}>
+              <i class="nav-icon fas fa-bars"></i>
+              <p>
+                Category
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="customer" class="nav-link" {{ request()->is('/') ? 'active' : ''}}>
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Customer
+              </p>
+            </a>
+          </li>
+
+          {{-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
@@ -67,7 +91,7 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li> --}}
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

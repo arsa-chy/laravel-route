@@ -1,5 +1,7 @@
 @extends('templates.master')
 
+@section('title', 'Dashboard')
+
 @section('header-content')
   <div class="row mb-2">
           <div class="col-sm-6">
