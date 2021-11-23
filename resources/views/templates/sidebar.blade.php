@@ -44,12 +44,30 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="product" class="nav-link" {{ request()->is('/') ? 'active' : ''}}>
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
                 Product
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-info right">2</span>
               </p>
             </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="product" class="nav-link" {{ request()->is('/') ? 'active' : ''}}>
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Data Product</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="product/create" class="nav-link" {{ request()->is('/') ? 'active' : ''}}>
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Create Product</p>
+                </a>
+              </li>
+            </ul>
           </li>
           <li class="nav-item">
             <a href="category" class="nav-link" {{ request()->is('/') ? 'active' : ''}}>

@@ -21,4 +21,23 @@ class ProductController extends Controller
 
         return redirect()->back();
     }
+
+    public function create()
+    {
+        return view('pages.productCreate');
+    }
+
+    public function store(Request $request)
+    {
+        $product = new M_Product();
+        $product->name = $request->name;
+        $product->description = $request->description;
+        $product->category_id = $request->category_id;
+        $product->price = $request->price;
+        $product->stock = $request->stock;
+        $product->save();
+
+        // dd($request->all());
+        return redirect('product');
+    }
 }

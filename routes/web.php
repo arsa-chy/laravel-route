@@ -21,6 +21,8 @@ Route::get('/', [DashboardController::class, 'index']);
 
 Route::get('/product', [ProductController::class, 'index']);
 Route::get('/product/delete/{id}', [ProductController::class, 'destroy'])->name('produkDelete');
+Route::get('/product/create', [ProductController::class, 'create'])->name('produkCreate');
+Route::post('/product/store', [ProductController::class, 'store'])->name('produkStore');
 
 Route::get('/category', [CategoryController::class, 'index']);
 Route::get('/category/delete/{id}', [CategoryController::class, 'destroy'])->name('deleteCategory');

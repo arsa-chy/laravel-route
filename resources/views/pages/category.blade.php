@@ -15,7 +15,7 @@
                 <table class="table table-hover text-nowrap">
                   <thead>
                     <tr>
-                      <th>Id</th>
+                      <th>ID</th>
                       <th>Nama</th>
                       <th>Deskripsi</th>
                       <th>Aksi</th>
